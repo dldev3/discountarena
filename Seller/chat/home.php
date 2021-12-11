@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 session_start();
 
 // echo '<pre>';
@@ -17,8 +18,14 @@ if (isset($_SESSION['username'])) {
     #getting user data
     $user = getUser($_SESSION['username'], $conn);
 
-    #getting user conversations
-    $conversations = getConversation($user['user_id'], $conn);
+
+    try {
+        #getting user conversations
+        $conversations = getConversation($user['user_id'], $conn);
+    } catch (\Throwable $th) {
+        echo "";
+    }
+
 
     // echo "<pre>";
     // print_r($user);
@@ -45,7 +52,7 @@ if (isset($_SESSION['username'])) {
             <ol class="breadcrumb" style="background-color:  #fff; ">
                 <li class="breadcrumb-item"><a href="http://localhost/DiscountArena/homepagenew.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="http://localhost/DiscountArena/newsfeed/kesh.php">Newfeed</a></li>
-                <li class="breadcrumb-item"><a href="http://localhost/DiscountArena/Customer/LoginandRegistration/logout-user.php">Logout</a></li>
+                <li class="breadcrumb-item"><a href="http://localhost/DiscountArena/Seller/LoginandRegistration/logout-user.php">Logout</a></li>
                 <li class="breadcrumb-item active" aria-current="page">User Chat</li>
             </ol>
         </nav>
@@ -56,13 +63,13 @@ if (isset($_SESSION['username'])) {
             <div class="p-2 w-400 rounded shadow">
                 <div class="d-flex justify-content-center align-items-center mb-3 p-3 bg-light">
                     <div class="d-flex align-items-center">
-                        <h3 class="fs-xs m-2"><?php echo $_SESSION['name'] ?></h3>
+                        <h3 class="fs-xs m-2">I'm <?php echo $_SESSION['name'] ?></h3>
                     </div>
                     <!-- <a href="logout.php" class="btn btn-dark">Logout</a> -->
                 </div>
 
                 <div class="input-group mb-3">
-                    <input type="text" placeholder="Search..." class="form-control" id="searchText">
+                    <input type="text" placeholder="Search Customer Here..." class="form-control" id="searchText">
                     <button class="btn btn-primary"><i class="fa fa-search" id="searchBtn"></i> </button>
                 </div>
 

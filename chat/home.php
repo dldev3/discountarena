@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 session_start();
 
 // echo '<pre>';
@@ -17,8 +18,14 @@ if (isset($_SESSION['username'])) {
     #getting user data
     $user = getUser($_SESSION['username'], $conn);
 
+    try {
+        $conversations = getConversation($user['user_id'], $conn);
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+
     #getting user conversations
-    $conversations = getConversation($user['user_id'], $conn);
+
 
     // echo "<pre>";
     // print_r($user);
@@ -56,13 +63,13 @@ if (isset($_SESSION['username'])) {
             <div class="p-2 w-400 rounded shadow">
                 <div class="d-flex justify-content-center align-items-center mb-3 p-3 bg-light">
                     <div class="d-flex align-items-center">
-                        <h3 class="fs-xs m-2"><?php echo $_SESSION['name'] ?></h3>
+                        <h3 class="fs-xs m-2">I'm<?php echo $_SESSION['name'] ?></h3>
                     </div>
                     <!-- <a href="logout.php" class="btn btn-dark">Logout</a> -->
                 </div>
 
                 <div class="input-group mb-3">
-                    <input type="text" placeholder="Search..." class="form-control" id="searchText">
+                    <input type="text" placeholder="Search Seller Here..." class="form-control" id="searchText">
                     <button class="btn btn-primary"><i class="fa fa-search" id="searchBtn"></i> </button>
                 </div>
 

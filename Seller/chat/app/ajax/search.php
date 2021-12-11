@@ -11,7 +11,7 @@ if (isset($_SESSION['name'])) {
 
         # creating simple search algorithm
         $key = "%{$_POST['key']}%";
-        $sql = "SELECT * FROM sellernew WHERE username LIKE ? OR name LIKE ? ";
+        $sql = "SELECT * FROM customernew WHERE username LIKE ? OR name LIKE ? ";
 
         $stmt = $conn->prepare($sql);
         $stmt->execute([$key, $key]);

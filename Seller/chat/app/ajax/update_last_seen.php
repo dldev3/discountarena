@@ -10,7 +10,7 @@ if (isset($_SESSION['name'])) {
     #get the logged in user's username from session
     $id = $_SESSION['user_id'];
 
-    $sql = "UPDATE users SET last_seen = NOW() WHERE user_id = ?";
+    $sql = "UPDATE sellernew SET last_seen = NOW() WHERE user_id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$id]);
 } else {

@@ -2,7 +2,7 @@
 
 function getUser($username, $conn)
 {
-    $sql = "SELECT * FROM sellernew WHERE username=?";
+    $sql = "SELECT * FROM customernew WHERE username=?";
 
     $stmt = $conn->prepare($sql);
     $stmt->execute([$username]);
