@@ -54,7 +54,7 @@ if (isset($_SESSION['username'])) {
             <ol class="breadcrumb" style="background-color:  #fff; ">
                 <li class="breadcrumb-item"><a href="http://localhost/DiscountArena/homepagenew.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="http://localhost/DiscountArena/newsfeed/kesh.php">Newfeed</a></li>
-                <li class="breadcrumb-item"><a href="http://localhost/DiscountArena/Customer/LoginandRegistration/logout-user.php">Logout</a></li>
+                <li class="breadcrumb-item"><a href="http://localhost/DiscountArena/Seller/LoginandRegistration/logout-user.php">Logout</a></li>
                 <li class="breadcrumb-item active" aria-current="page">User Chat</li>
             </ol>
         </nav>
