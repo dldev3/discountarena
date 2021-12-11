@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title></title>
+	<link rel="stylesheet"  href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style1.css" />
+</head>
+<body>
+<div class="product">
+
+
+<h1>
+ Add product details </h1>
+
+<form action="add.php" method="POST">
+
+   <p> Product Name : &nbsp;&nbsp;  <input type="text" name="name"> </p>
+
+    <p>Product Type  : &nbsp; &nbsp; <input type="text" name="type" placeholder="Ex: Dress,Shirt,Shoes..."> </p>
+   
+
+    <br>
+	 <br>
+	   <p>Available sizes : &nbsp;  <input type="text" name="size" > </p>
+   
+
+   <br>
+   <p> discount price :&nbsp;&nbsp;  <input type="text" name="price"></p>
+  <br>
+
+  
+
+   
+   <p>Insert the product  images : </p>
+
+   <br>
+
+   &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;   <input type="file" accept="image/*" name="image1">
+    <br>
+
+   &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;   <input type="file" accept="image/*" name="image2">
+  </p>
+
+
+    <br>
+    <p>Add description</p> <textarea cols="60" rows="5" type = "text" name="description"></textarea>
+
+   
+    <br>
+    <input type="submit" name="submit" value="Submit" >
+
+<br> <br>
+
+  
+
+
+
+</form>
+</div>
+
+</body>
+</html> 
