@@ -47,7 +47,7 @@
                   <p class="text-muted font-size-sm"><?php echo $_SESSION['address'] ?></p>
                   <button class="btn btn-outline-primary"><a href="chatbot.html">Message</a></button>
                   <button class="btn btn-outline-primary"><a href="http://localhost/DiscountArena/Advertiesments/advertiesment.html">Insert your Advertiesment</a></button>
-                  <button class="btn btn-outline-primary"><a href="../../../chat/home.php">Chat with Customers</a></button>
+                  <button class="btn btn-outline-primary"><a href="../../chat/home.php">Chat with Customers</a></button>
                 </div>
               </div>
             </div>
@@ -168,6 +168,19 @@
                   </div>
                 </div>
               </div>
+
+
+              <div>
+                <?php
+
+                echo '
+                <pre>';
+                var_dump($_SESSION);
+                echo '</pre>';
+
+                ?>
+              </div>
+
 
               <script>
                 $(document).ready(function() {

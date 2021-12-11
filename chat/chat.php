@@ -47,7 +47,7 @@ if (isset($_SESSION['username'])) {
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/fontawesome.css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-        <title>Chat App - Home</title>
+        <title>DiscountArena - User chat</title>
     </head>
 
     <body>
