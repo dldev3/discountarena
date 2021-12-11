@@ -67,7 +67,7 @@
               </li>
 
               <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                <button class="btn btn-outline-primary" style="width: 100%;"><a href="../../../chat/home.php">Chat with Sellers</a></button>
+                <button class="btn btn-outline-primary" style="width: 100%;"><a href="../../chat/home.php">Chat with Sellers</a></button>
               </li>
 
               </li>
@@ -148,19 +148,6 @@
                     <button id="send-btn">Send</button>
                   </div>
                 </div>
-              </div>
-
-
-              <div>
-                <?php
-
-                echo '<pre>';
-                var_dump($_SESSION);
-                echo '</pre>';
-
-
-                ?>
-
               </div>
 
 

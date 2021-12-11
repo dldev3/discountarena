@@ -169,19 +169,6 @@
                 </div>
               </div>
 
-
-              <div>
-                <?php
-
-                echo '
-                <pre>';
-                var_dump($_SESSION);
-                echo '</pre>';
-
-                ?>
-              </div>
-
-
               <script>
                 $(document).ready(function() {
                   $("#send-btn").on("click", function() {
